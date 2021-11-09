@@ -1,2 +1,1 @@
-A very simple type checker for a language i am writing.
-I still don't have a name for the language...
+A very simple type checker for Sashimi.
