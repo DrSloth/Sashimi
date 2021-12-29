@@ -38,9 +38,10 @@ loop {
     }
 }
 ```
-Anything that implements `into<ControlFlow<T,T>>` can be used, it should be carefully implemented.
+Anything that implements `into<ControlFlow<T,T>>` can be used, it should be carefully overriden.
 For instance `Option<T>` implements `into<ControlFlow<T,T>>` where `None => Break(Void)`,
 `Some(T) => Skip` so do `Either<ControlFlow, ControlFlow>` and `ControlFlow | ControlFlow`.
+By default all types map to `ControlFlow::Skip`
 
 This means you can directly use the if construct with loop
 ```
