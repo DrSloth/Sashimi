@@ -1,0 +1,15 @@
+- Think about macro fns and how they work with function pointers
+  - They are very likely comptime only, but there should be a way to specify a runtime alternative
+  - Maybe macro fns HAVE to provide a runtime alternative
+    - Macro fns are just functions which either dispatch to a function or a macro
+      - Can be thought of as a function with more info on how to be optimised at comptime
+      - There also has to be a mechanism to opt out and FORCE it to be a function call (somehow)
+- How do lifetimes work?
+  - How do you dispatch over lifetimes, for instance to avoid allocation for 'static
+- How do vararg functions work
+  - How do c-like vararg functions work
+  - How do mono type vararg functions work
+  - How can you overload the number of args a function takes (function overloading)
+- How to "override" functions
+  - How to override provides
+  - What are the rules for overrides on impls
